@@ -7,6 +7,7 @@ import {GiHamburgerMenu} from 'react-icons/gi'
 import {AiFillHome, AiFillBackward} from 'react-icons/ai'
 import {HiFire} from 'react-icons/hi'
 import {SiYoutubegaming} from 'react-icons/si'
+import {BiListPlus} from 'react-icons/bi'
 
 import {
   HeaderContainer,
@@ -170,7 +171,7 @@ const Header = props => (
                         }
                         onClick={onClickSavedTab}
                       >
-                        <AiFillHome
+                        <BiListPlus
                           size={30}
                           color={activeTab === 'Saved' ? '#ff0b37' : '#909090'}
                         />

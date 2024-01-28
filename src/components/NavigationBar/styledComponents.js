@@ -47,3 +47,28 @@ export const OptionText = styled.p`
   font-size: 14px;
   margin-left: 20px;
 `
+
+export const ContactsContainer = styled.div`
+  padding: 20px;
+  width: 100%;
+  padding-bottom: 10px;
+`
+
+export const ContactUsHeading = styled.h1`
+  color: ${props => props.color};
+  font-family: 'Roboto';
+  font-size: 18px;
+`
+export const SocialIcons = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+`
+export const SocialDescription = styled.p`
+  color: ${props => props.color};
+  font-family: 'Roboto';
+  font-size: 15px;
+  width: 90%;
+  font-weight: 450;
+`

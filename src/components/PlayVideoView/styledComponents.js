@@ -78,8 +78,8 @@ export const ChannelInfo = styled.div`
   align-items: flex-start;
 `
 export const ChannelProfile = styled.img`
-  width: 60px;
-  width: 60px;
+  width: 50px;
+  width: 50px;
   margin-top: 15px;
 `
 export const ChannelNameAndSubscribers = styled.div`
@@ -95,18 +95,21 @@ export const ChannelName = styled.p`
   font-size: 18px;
   font-weight: 500;
   color: ${props => props.color};
+  margin-bottom: 5px;
 `
 
 export const ChannelSubscribers = styled.p`
   font-family: 'Roboto';
-  font-size: 13px;
+  font-size: 12px;
+  font-weight: 450;
   color: ${props => props.color};
-  margin-top: 0;
+  margin: 0;
+  margin-bottom: 10px;
 `
 
 export const ChannelDescription = styled.p`
   font-family: 'Roboto';
-  font-size: 15px;
+  font-size: 14px;
   color: ${props => props.color};
   margin-top: 0;
   margin-top: 20px;

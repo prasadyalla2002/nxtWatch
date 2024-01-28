@@ -39,7 +39,19 @@ const PlayVideoView = props => {
       {value => {
         const {isDarkTheme, addVideo, savedVideos} = value
         const textColor = isDarkTheme ? '#64748b' : '#231f20'
-        const isSaved = false
+        let isSaved
+
+        const index = savedVideos.findIndex(each => each.id === videoDetails.id)
+
+        if (index === -1) {
+          isSaved = false
+        } else {
+          isSaved = true
+        }
+
+        const onClickSave = () => {
+          addVideo(videoDetails)
+        }
 
         const saveIconColor = isSaved ? '#2563eb' : textColor
 
@@ -71,12 +83,16 @@ const PlayVideoView = props => {
                       color={isDisliked ? '#2563eb' : '#64748b'}
                       onClick={onClickDisLike}
                     >
-                      <AiOutlineDislike size={25} />
+                      <AiOutlineDislike size={25} style={{marginTop: 5}} />
                     </Button>
                     <ButtonText color={textColor}>Dislike</ButtonText>
                   </ButtonContainer>
                   <ButtonContainer>
-                    <Button type="button" color={saveIconColor}>
+                    <Button
+                      type="button"
+                      color={saveIconColor}
+                      onClick={onClickSave}
+                    >
                       <BiListPlus size={25} />
                     </Button>
                     <ButtonText color={textColor}>

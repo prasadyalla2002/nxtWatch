@@ -1,9 +1,11 @@
 import {Component} from 'react'
+import {BiListPlus} from 'react-icons/bi'
 
 import {AiFillHome} from 'react-icons/ai'
 import {HiFire} from 'react-icons/hi'
 
 import {SiYoutubegaming} from 'react-icons/si'
+import {FaFacebook, FaTwitter, FaLinkedin} from 'react-icons/fa'
 
 import NxtWatchContext from '../../context/NxtWatchContext'
 
@@ -14,6 +16,10 @@ import {
   OptionLink,
   OptionLinkContainer,
   OptionText,
+  ContactsContainer,
+  ContactUsHeading,
+  SocialIcons,
+  SocialDescription,
 } from './styledComponents'
 
 class NavigationBar extends Component {
@@ -98,7 +104,7 @@ class NavigationBar extends Component {
                     }
                     onClick={onClickSavedTab}
                   >
-                    <AiFillHome
+                    <BiListPlus
                       size={30}
                       color={activeTab === 'Saved' ? '#ff0b37' : '#909090'}
                     />
@@ -106,6 +112,19 @@ class NavigationBar extends Component {
                   </OptionLinkContainer>
                 </OptionLink>
               </Options>
+              <ContactsContainer>
+                <ContactUsHeading color={textColor}>
+                  CONTACT US
+                </ContactUsHeading>
+                <SocialIcons>
+                  <FaFacebook size={28} />
+                  <FaTwitter size={28} />
+                  <FaLinkedin size={28} />
+                </SocialIcons>
+                <SocialDescription color={textColor}>
+                  Enjoy! Now to see your channels and recommendations!
+                </SocialDescription>
+              </ContactsContainer>
             </NavigationLargeContainer>
           </Navigation>
         )
